@@ -189,6 +189,7 @@ Wait
 implicit wait
 -------------
 driver.manage(),timeout(),implicitwait(1:10,TimeUnit.seconds) - wait for given second and then page will load
+New update
 
 
 
