@@ -1,0 +1,195 @@
+Xpath syntaxc
+==============
+//tagname[@attributename = 'attributevalue']
+
+Text ;
+======
+//tagname[text()='textname']
+
+text contains;
+================
+//tagname[contains (text(),'partiallytext')]
+
+attribute conatins;
+====================
+
+//tagname[contains (@attributename,'patiallyattributevale')]
+
+Child 
+======
+//tagname[@attibutename = 'attributevalue']/child::tagname/child::tagname/child::tagname[1]
+
+following
+=========
+//tagname[@attributename = 'attributevalue']/following::tagname[1]
+
+peceding 
+=========
+//tagname[@attributename = 'attributevalue']/preceding::tagname[1]
+
+peceding 
+
+following sibling
+======
+//tagname[@attributename = 'attributevalue']/parent::*/followinf-sibling:: tagname[1]/a
+
+preceding sibling
+=================
+//tagname[@attributename = 'attributevalue']/parent::*/preceding-sibling::tagname[1]/a
+
+
+Actions;
+========
+
+Actions act = new Actions(driver);
+
+
+Move to element
+---------------
+
+act.move to element(driver.find element(By.xpath("//tagname[@attributename= 'attributevalue']").build.perfoms();
+
+
+Drag and drop
+=============
+action.draganddrop(from,to).build.perform();
+
+
+Doubleclick
+-----------
+act.double click(driver.find element(By.linkText("text")).build.perfoms();
+
+Rightclick
+----------
+
+act.contextClick(driver.find element(By.linkText("text")).build.perfoms();
+
+Action in shift
+---------------
+ keyup() - release shift
+ keyDown()- press shift
+ sendkeys()- insert value
+
+Robot method - It is use in keyboard action
+============
+
+Robot robot = new Robot ();
+
+robot.keypress(keyEvent.VK_Down);
+robot.keyrelease(keyEvent.VK_Down);
+(keyEvent.VK_Down,TAB,ENTER)
+(keyEvent. SHIFT & G)-  print some letter
+
+
+Navigation command
+===================
+to() - navigate().to(path);
+back() - navigate().back(); 
+forward() - navigate().forward();
+refresh() - navigate().refresh();
+
+Methods
+=======
+get()
+getTitle()
+getCurrenturl()
+findElement()
+findElements()
+quit()
+manage()
+webElement()
+sendkeys()
+click()
+gettext()
+getAtrribute()
+
+
+Alerts
+========
+simple alert - It give only information only ok button is there
+conform alert - It have ok or cancel button
+prompt alert- we need to enter text
+
+Alert al = driver.switch to().alertr();
+
+Screenshot
+===========
+Takescreenshot
+getscreenshot
+
+Takescreenshot screenshot  = (Takescreenshot)driver;
+File sourcefile = screenshot.getscreenshot(outputType.FILE);
+File destinationfile = new file(save desigination path);
+Filehandler.copy(sourcefile,destinationfile );
+move to file - filehandler or file utils
+
+DropDowm
+========
+Select select = new select(dDnskills);
+
+1.selectByvalue();
+2.selectByindex();
+3.selectByVisibleText();
+4.getOptions();
+5.getAllselectedoptions();
+6.getFirstselectedoptions();
+7.isMultiple();
+8.deselectBy value();
+9.deselectBy Index();
+10.deselectBy Visibletext();
+11.deselectAll();
+
+
+
+Frame
+======
+driver.switchTo().frame(0);
+driver.switchTo().defaultContent(); - come to original page
+List<webElement> element = driver.find elements(By.tagName("iframe"); - To check the size of tagname
+
+Javascript
+===========
+javascript Executor executor = (javascript Executor).driver;
+
+ Scrolldown
+ =========
+ argument[0].scrollIntoview(true)
+ 
+ ScrollUp
+ ========
+ argument[0].scrollIntoview(false)
+
+ Click
+ =====
+ executor .executeScript("arugment[0].click()") 
+
+ Insert
+ =======
+ executor .executeScript("arugment[0].setattribute('value','welcome'),textuser");
+ 
+ Get Attribute
+ ==============
+ executor .executeScript("return arugment[0].getattribute('value'),textuser");
+
+
+windowhandle
+============
+deiver.switch To().window(string url)
+deiver.switch To().window(string title)
+deiver.switch To().window(string windowsId)
+getwindowsHandle() - It is used to get parentwindowsId
+
+Wait 
+====
+1.static wait- thread.sleep(milliseconds)
+2.Dynamic wait- implicit wait  (500ms-default polling period)
+                 explicit wait ( webdriverwait - default wait)
+                fluint wait
+
+implicit wait
+-------------
+driver.manage(),timeout(),implicitwait(1:10,TimeUnit.seconds) - wait for given second and then page will load
+
+
+
+
